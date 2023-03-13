@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/background_gradient_end">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="78dp">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="@dimen/burger_width"
+            android:layout_height="@dimen/burger_height"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/burger_start"
+            android:layout_marginTop="@dimen/burger_top"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/textLogo_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/textLogo_top"
+            android:layout_marginEnd="53dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toStartOf="@+id/edit_tv"
+            android:layout_toEndOf="@+id/back_iv"
+            android:width="@dimen/textLogo_width"
+            android:height="@dimen/textLogo_height"
+            android:text="@string/site_details"
+            android:textAppearance="@style/site"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/edit_tv"
+            android:layout_width="35dp"
+            android:layout_height="28dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/profile_top"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="17dp"
+            android:text="@string/edit"
+            android:textAppearance="@style/site"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FAFAFA"
+    tools:context=".activity.HomeActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/custom_toolbar_home"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:width="320dp"
+        android:height="37dp"
+        android:hint="@string/type_keywords_to_search"
+        android:paddingStart="20dp"
+        android:background="@drawable/searchbar_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+        tools:ignore="MissingConstraints,NotSibling,RtlSymmetry"
+        android:paddingEnd="20.3dp"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:width="320dp"
+        android:height="37dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        tools:ignore="MissingConstraints,NotSibling">
+
+        <TextView
+            android:id="@+id/site_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="100dp"
+            android:layout_toStartOf="@+id/socialMedia_tv"
+            android:width="55dp"
+            android:height="33dp"
+            android:text="@string/sites"
+            android:textColor="#3C4857"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@id/socialMedia_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5.6dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@+id/count_tv"
+            android:width="113dp"
+            android:height="27dp"
+            android:text="@string/social_media"
+            android:textColor="#3C4857"
+            android:textSize="19.2sp" />
+
+        <TextView
+            android:id="@+id/count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="3.6dp"
+            android:layout_marginEnd="6.8dp"
+            android:layout_toStartOf="@+id/actionDown_ib"
+            android:width="29.6dp"
+            android:height="29.6dp"
+            android:background="@drawable/round_background"
+            android:paddingTop="3dp"
+            android:text="@string/_07"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:id="@+id/actionDown_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="19.4dp"
+            android:width="10dp"
+            android:height="6dp"
+            android:contentDescription="@string/actiondown"
+            android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/site_tv"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0.6dp"
+            android:contentDescription="@string/underline"
+            android:src="@drawable/site_underline" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/text_layout"
+        tools:listitem="@layout/home_tab_design" />
+
+    <ImageView
+        android:id="@+id/add_ib"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="292dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/add"
+        android:src="@drawable/add_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

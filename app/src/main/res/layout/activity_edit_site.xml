@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/edit_site_detail"
+    tools:context=".activity.SiteDetailsActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingTop="12dp"
+        android:background="@color/background_gradient_end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        app:title="@string/edit"
+        app:titleMarginBottom="27dp"
+        app:titleTextColor="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/custom_toolbar"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/siteFormEdit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/custom_toolbar">
+
+            <TextView
+                android:id="@+id/url_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/url"
+                android:textAppearance="@style/siteText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/url_et"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginStart="19.5dp"
+                android:layout_marginTop="10.15dp"
+                android:layout_marginEnd="19.5dp"
+                android:background="@drawable/text_box_design"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/url_tv" />
+
+            <TextView
+                android:id="@+id/sitName_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="19.5dp"
+                android:text="@string/site_name"
+                android:textAppearance="@style/siteText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/url_et" />
+
+            <EditText
+                android:id="@+id/siteName_et"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginStart="19.5dp"
+                android:layout_marginTop="10.15dp"
+                android:layout_marginEnd="19.5dp"
+                android:background="@drawable/text_box_design"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sitName_tv" />
+
+            <TextView
+                android:id="@+id/folder_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="19.5dp"
+                android:text="@string/sector_folder"
+                android:textAppearance="@style/siteText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/siteName_et" />
+
+            <EditText
+                android:id="@+id/folder_et"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginStart="19.5dp"
+                android:layout_marginTop="10.15dp"
+                android:layout_marginEnd="19.5dp"
+                android:background="@drawable/text_box_design"
+                android:clickable="false"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:paddingEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/folder_tv"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/userName_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="19.5dp"
+                android:text="@string/user_name"
+                android:textAppearance="@style/siteText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/folder_et" />
+
+            <EditText
+                android:id="@+id/userName_et"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginStart="19.5dp"
+                android:layout_marginTop="10.15dp"
+                android:layout_marginEnd="19.5dp"
+                android:background="@drawable/text_box_design"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userName_tv" />
+
+            <TextView
+                android:id="@+id/sitePassword_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="19.5dp"
+                android:text="@string/site_password"
+                android:textAppearance="@style/siteText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userName_et" />
+
+            <LinearLayout
+                android:id="@+id/text_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="19.5dp"
+                android:background="@drawable/text_view_design"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/sitePassword_tv"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:id="@+id/sitePassword_et"
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/text_box_design"
+                    android:inputType="textPassword"
+                    android:paddingStart="22dp"
+                    android:paddingEnd="16dp"
+                    android:textColorHint="#787E8C" />
+                <ImageButton
+                    android:id="@+id/passwordToggle_ib"
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/text_box_design"
+                    android:contentDescription="@string/toggle"
+                    android:src="@drawable/ic_baseline_visibility_24" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/notes_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="19.5dp"
+                android:text="@string/notes"
+                android:textAppearance="@style/siteText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_layout" />
+
+            <EditText
+                android:id="@+id/notes_et"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:layout_marginStart="19.5dp"
+                android:layout_marginTop="10.15dp"
+                android:layout_marginEnd="19.5dp"
+                android:background="@drawable/text_box_design"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/notes_tv" />
+
+            <Button
+                android:id="@+id/update_bt"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="29dp"
+                android:background="@drawable/site_buttons"
+                android:text="@string/update"
+                android:textAppearance="@style/resetButton"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/notes_et" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

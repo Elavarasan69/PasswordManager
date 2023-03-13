@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">PasswordManagerMobile</string>
+    <string name="logo">logo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="mPin">MPin</string>
+    <string name="forget_your_password">Forget your password?</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="or">OR</string>
+    <string name="use_your_fingerprint_to_login">USE YOUR FINGERPRINT TO LOGIN</string>
+    <string name="enter_4_digit_MPin">Enter 4 digit MPin</string>
+    <string name="re_enter_4_digit_MPin">Re-Enter 4 digit MPin</string>
+    <string name="add_site">Add Site</string>
+    <string name="url">URL</string>
+    <string name="site_name">Site Name</string>
+    <string name="sector_folder">Sector/Folder</string>
+    <string name="user_name">User Name</string>
+    <string name="site_password">Site Password</string>
+    <string name="notes">Notes</string>
+    <string name="reset">Reset</string>
+    <string name="save">Save</string>
+    <string name="sites">Sites</string>
+    <string name="social_media">Social Media</string>
+    <string name="_07">07</string>
+    <string name="www_facebook_com">www.facebook.com</string>
+    <string name="actiondown">actionDown</string>
+    <string name="underline">underline</string>
+    <string name="add">add</string>
+    <string name="update">update</string>
+    <string name="toggle">toggle</string>
+    <string name="type_keywords_to_search">Type keywords to search</string>
+    <string name="site_details">Site Details</string>
+    <string name="edit">Edit</string>
+</resources>

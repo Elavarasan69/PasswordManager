@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/site_detail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".activity.SiteDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/background_gradient_end"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        app:title="@string/edit"
+        app:titleTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+<!--    <include-->
+<!--        android:id="@+id/include"-->
+<!--        layout="@layout/site_detail_tooolbar"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_toolbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/siteFormEdit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/custom_toolbar">
+
+            <TextView
+                android:id="@+id/url_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/url"
+                android:textAppearance="@style/siteText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/url_et"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginStart="19.5dp"
+                android:layout_marginTop="10.15dp"
+                android:layout_marginEnd="19.5dp"
+                android:background="@drawable/text_box_design"
+                android:gravity="left"
+                android:paddingStart="19dp"
+                android:paddingTop="8.5dp"
+                android:textColor="#3C4858"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/url_tv"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/sitName_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="19.5dp"
+                android:text="@string/site_name"
+                android:textAppearance="@style/siteText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/url_et" />
+
+            <TextView
+                android:id="@+id/siteName_et"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginStart="19.5dp"
+                android:layout_marginTop="10.15dp"
+                android:layout_marginEnd="19.5dp"
+                android:background="@drawable/text_box_design"
+                android:gravity="left"
+                android:paddingStart="19dp"
+                android:paddingTop="8.5dp"
+                android:textColor="#3C4858"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sitName_tv"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/folder_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="19.5dp"
+                android:text="@string/sector_folder"
+                android:textAppearance="@style/siteText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/siteName_et" />
+
+            <TextView
+                android:id="@+id/folder_et"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginStart="19.5dp"
+                android:layout_marginTop="10.15dp"
+                android:layout_marginEnd="19.5dp"
+                android:background="@drawable/text_box_design"
+                android:clickable="false"
+                android:gravity="left"
+                android:paddingStart="19dp"
+                android:paddingTop="8.5dp"
+                android:textColor="#3C4858"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/folder_tv"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/userName_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="19.5dp"
+                android:text="@string/user_name"
+                android:textAppearance="@style/siteText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/folder_et" />
+
+            <TextView
+                android:id="@+id/userName_et"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginStart="19.5dp"
+                android:layout_marginTop="10.15dp"
+                android:layout_marginEnd="19.5dp"
+                android:background="@drawable/text_box_design"
+                android:gravity="left"
+                android:paddingStart="19dp"
+                android:paddingTop="8.5dp"
+                android:textColor="#3C4858"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userName_tv"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/sitePassword_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="19.5dp"
+                android:text="@string/site_password"
+                android:textAppearance="@style/siteText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userName_et" />
+
+            <LinearLayout
+                android:id="@+id/text_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="9.5dp"
+                android:layout_marginEnd="19.5dp"
+                android:background="@drawable/text_box_design"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/sitePassword_tv"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:id="@+id/sitePassword_et"
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_weight="1.5"
+                    android:backgroundTint="@color/white"
+                    android:gravity="left"
+                    android:inputType="textPassword"
+                    android:paddingStart="19dp"
+                    android:paddingTop="8.5dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="#3C4858"
+                    android:textColorHint="#787E8C" />
+
+                <ImageButton
+                    android:id="@+id/passwordToggle_ib"
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_weight="0.25"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@string/toggle"
+                    android:src="@drawable/ic_baseline_visibility_24" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/notes_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="19.5dp"
+                android:text="@string/notes"
+                android:textAppearance="@style/siteText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_layout" />
+
+            <TextView
+                android:id="@+id/notes_et"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:layout_marginStart="19.5dp"
+                android:layout_marginTop="10.15dp"
+                android:layout_marginEnd="19.5dp"
+                android:layout_marginBottom="32.5dp"
+                android:background="@drawable/text_box_design"
+                android:gravity="left"
+                android:paddingStart="19dp"
+                android:paddingTop="8.5dp"
+                android:textColor="#3C4858"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/notes_tv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

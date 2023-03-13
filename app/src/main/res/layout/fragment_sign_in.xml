@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    tools:context=".fragment.SignInFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/mobileNumber_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mobileNo_top"
+            android:autofillHints="Mobile Number"
+            android:background="@drawable/text_view_design"
+            android:hint="@string/mobile_number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:paddingStart="@dimen/mobileNo_paddingStart"
+            android:paddingEnd="@dimen/mobileNo_paddingEnd"
+            android:textColorHint="@color/text_ColorHint" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pinTextBox_height"
+            android:layout_marginTop="@dimen/pinTextBox_top"
+            android:background="@drawable/text_view_design"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/mPin_et"
+                android:layout_width="@dimen/pinTextBox_width"
+                android:layout_height="@dimen/pinTextBox_height"
+                android:layout_weight="1.5"
+                android:autofillHints="MPin"
+                android:hint="@string/mPin"
+                android:backgroundTint="@color/white"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:paddingStart="@dimen/pinTextBox_paddingStart"
+                android:paddingEnd="@dimen/setPin_paddingEnd"
+                android:textColorHint="@color/text_ColorHint" />
+
+            <ImageButton
+                android:id="@+id/passwordToggle_ib"
+                android:layout_width="@dimen/pinTextBox_width"
+                android:layout_height="@dimen/pinTextBox_height"
+                android:layout_weight="0.25"
+                android:background="@drawable/text_view_design"
+                android:contentDescription="@string/toggle"
+                android:src="@drawable/ic_baseline_visibility_24" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/forgetPassword_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/forgetpwd_top"
+            android:fontFamily="@font/emprint_semibold"
+            android:text="@string/forget_your_password"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/submit_bt"
+            android:layout_width="@dimen/signIn_width"
+            android:layout_height="@dimen/signIn_height"
+            android:layout_marginTop="@dimen/signin_top"
+            android:background="@drawable/button_style"
+            android:text="@string/sign_in"
+            android:textColor="@color/background_gradient_end"
+            android:textSize="@dimen/signin_text" />
+
+        <ImageView
+            android:id="@+id/fingerPrint_iv"
+            android:layout_width="@dimen/fingerprint_width"
+            android:layout_height="@dimen/fingerprint_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/fingerprint_top"
+            android:src="@drawable/fingerprint_icon" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tv_layout_top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/tv_layout_end"
+                android:text="@string/or"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_layout_text" />
+
+            <TextView
+                android:layout_width="@dimen/tv_layout_width"
+                android:layout_height="@dimen/tv_layout_height"
+                android:text="@string/use_your_fingerprint_to_login"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_Layout_text" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

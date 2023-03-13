@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    tools:context=".fragment.SignUpFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/mobileNumber_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mobile_top"
+            android:autofillHints="Mobile Number"
+            android:background="@drawable/text_view_design"
+            android:hint="@string/mobile_number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:paddingStart="@dimen/mobile_padding_start"
+            android:paddingEnd="@dimen/mobile_padding_end"
+            android:textColorHint="@color/text_ColorHint" />
+
+        <EditText
+            android:id="@+id/setMPin_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/setPin_top"
+            android:autofillHints="Mobile Number"
+            android:background="@drawable/text_view_design"
+            android:hint="@string/enter_4_digit_MPin"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:paddingStart="@dimen/setPin_paddingStart"
+            android:paddingEnd="@dimen/setPin_paddingEnd"
+            android:textColorHint="@color/text_ColorHint" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pinTextBox_height"
+            android:layout_marginTop="@dimen/pinTextBox_top"
+            android:background="@drawable/text_view_design"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/checkMPin_et"
+                android:layout_width="@dimen/pinTextBox_width"
+                android:layout_height="@dimen/pinTextBox_height"
+                android:layout_weight="1.5"
+                android:autofillHints="MPin"
+                android:backgroundTint="@color/white"
+                android:hint="@string/re_enter_4_digit_MPin"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:paddingStart="@dimen/pinTextBox_paddingStart"
+                android:paddingEnd="@dimen/pinTextBox_paddingEnd"
+                android:textColorHint="@color/text_ColorHint" />
+
+            <ImageButton
+                android:id="@+id/passwordToggle_ib"
+                android:layout_width="@dimen/pinTextBox_width"
+                android:layout_height="@dimen/pinTextBox_height"
+                android:layout_weight="0.25"
+                android:background="@drawable/text_view_design"
+                android:contentDescription="@string/toggle"
+                android:src="@drawable/ic_baseline_visibility_24" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submit_bt"
+            android:layout_width="@dimen/signup_width"
+            android:layout_height="@dimen/signup_height"
+            android:layout_marginTop="@dimen/signup_top"
+            android:background="@drawable/button_style"
+            android:text="@string/sign_up"
+            android:textColor="@color/background_gradient_end"
+            android:textSize="@dimen/signup_text" />
+
+    </LinearLayout>
+
+</FrameLayout>
